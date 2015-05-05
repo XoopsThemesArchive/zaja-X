@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<table border="0" align="center" cellpadding="0" cellspacing="0" id="okvir">
+  <tr>
+    <td>
+ <table width="100%" cellspacing="0">
+        <tr id="header"> 
+          <td id="headerlogo"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>stairs2.jpg" width="160" height="80" alt="7dana online" /></a></td>
+          <td align="right" id="headerbanner"><{$xoops_banner}>
+            &nbsp;&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="2"><table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr align="center"> 
+                  <td width="288" bgcolor="#4A5975"></td>
+                  <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/index.php">INÍCIO</a></td>
+                  
+                  <td width="1" bgcolor="#d7d7d7"></td>
+                  <td id="headmenu"><a class="menuHead" 
+				  href="<{$xoops_url}>/modules/news/">NOTÍCIAS</a></td>
+
+                  <td width="1" bgcolor="#d7d7d7"></td>
+                  <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/mylinks/">LINKS</a></td>
+
+                  <td width="1" bgcolor="#d7d7d7"></td>
+                  <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/newbb/">FÓRUM</a></td>
+
+                  <td width="1" bgcolor="#d7d7d7"></td>
+                  <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/mydownloads/">DOWNLOAD</a></td>
+
+                  <td width="1" bgcolor="#d7d7d7"></td>
+                  <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/contact/">CONTATO</a></td>
+                </tr>
+            </table></td>
+        </tr>
+      </table>      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="180" class="headerprvi">
+              <form style="margin-top: 1px; margin-bottom: 0px" action="<{$xoops_url}>/search.php" method="post">
+                &nbsp;&nbsp;<input class="button" type="text" name="query" size="10" />
+                <input type="hidden" name="action" value="results" />
+                <input name="submit" type="submit" class="gumb" value="search" />
+              </form>
+            </td>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td class="pozdrav"> &nbsp;&nbsp;<{if $xoops_isuser}> Olá, <a href="<{$xoops_url}>/user.php"><{$xoops_uname}></a>&nbsp;&nbsp;&nbsp;<a href="<{$xoops_url}>/user.php">your 
+                  account </a>&nbsp; <{else}> <a href="<{$xoops_url}>/register.php">Register 
+                  now</a> on 7dana.com! <{/if}> <span class="right"> <{if $xoops_isuser}> 
+                  <a href="<{$xoops_url}>/user.php?op=logout"></a> <{else}> &nbsp;&nbsp;&nbsp;<a href="<{$xoops_url}>/user.php">Login</a> 
+                  <{/if}> </span></td>
+                <td align="right" class="vrijeme"><span id="clock"></span> <script language="JavaScript" type="text/javascript" src="<{$xoops_url}>/themes/Zaja-X/clock.js">
+      </script> &nbsp;</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" id="glavna">
+        <td id="leftcolumn"> 
+          <!-- Start left blocks loop -->
+          <{foreach item=block from=$xoops_lblocks}> <div class="<{cycle values="blockTitle"}>"><{$block.title}></div>
+          <div class="blockContent"><{$block.content}></div>
+		  <img src="<{$xoops_imageurl}>160.gif" width="160" height="1" alt="" />
+          <{/foreach}> 
+          <!-- End left blocks loop -->
+          <br /> <br />
+          </td>
+        <td id="centercolumn"> 
+          <!-- Display center blocks if any -->
+          <{if $xoops_showcblock == 1}> <table class="sadrzaj" cellspacing="0">
+            <tr> 
+              <td id="centerCcolumn" colspan="2"> 
+                <!-- Start center-center blocks loop -->
+                <{foreach item=block from=$xoops_ccblocks}> <table align="center" cellpadding="0" cellspacing="2">
+                  <tr> 
+                    <td> <div class="blockTitle"><{$block.title}></div>
+                      <div class="blockContent"><{$block.content}></div></td>
+                  </tr>
+                </table>
+                <{/foreach}> 
+                <!-- End center-center blocks loop -->
+              </td>
+            </tr>
+            <tr> 
+              <td id="centerLcolumn"> 
+                <!-- Start center-left blocks loop -->
+                <{foreach item=block from=$xoops_clblocks}> <table class="blok" align="center" cellpadding="3" cellspacing="2">
+                  <tr> 
+                    <td> <div class="blockTitle"><{$block.title}></div>
+                      <div class="blockContent"><{$block.content}></div></td>
+                  </tr>
+                </table>
+                <{/foreach}> 
+                <!-- End center-left blocks loop -->
+              </td>
+              <td id="centerRcolumn"> 
+                <!-- Start center-right blocks loop -->
+                <{foreach item=block from=$xoops_crblocks}> <table class="blok" align="center" cellpadding="3" cellspacing="2">
+                  <tr> 
+                    <td> <div class="blockTitle"><{$block.title}></div>
+                      <div class="blockContent"><{$block.content}></div></td>
+                  </tr>
+                </table>
+                <{/foreach}> 
+                <!-- End center-right blocks loop -->
+              </td>
+            </tr>
+          </table>
+          <{/if}> 
+          <!-- End display center blocks -->
+          <div id="content"> <{$xoops_contents}> </div>
+          <br /> <br /> <br /> </td>
+        <{if $xoops_showrblock == 1}> 
+        <td id="rightcolumn"> 
+          <!-- Start right blocks loop -->
+          <{foreach item=block from=$xoops_rblocks}> <div class="<{cycle values="blockTitle,blockTitledrugi,blockTitletri,blockTitletri,blockTitletri,blockTitle"}>"><{$block.title}></div>
+          <div class="blockContent"><{$block.content}></div>
+		  <img src="<{$xoops_imageurl}>160.gif" width="160" height="1" alt="" />
+          <{/foreach}> 
+          <!-- End right blocks loop -->
+          <br /> <br /> </td>
+        <{/if}> </tr>
+        <tr> 
+          <td colspan="3"> <table cellspacing="0" cellpadding="0" width="100%" border="0">
+            <tr align="center">
+              <td width="288" bgcolor="#4A5975"></td>
+              <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/index.php">INÍCIO</a></td>
+              <td width="1" bgcolor="#d7d7d7"></td>
+              <td id="headmenu"><a class="menuHead" 
+				  href="<{$xoops_url}>/modules/news/">NOTÍCIAS</a></td>
+              <td width="1" bgcolor="#d7d7d7"></td>
+              <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/mylinks/">LINKS</a></td>
+              <td width="1" bgcolor="#d7d7d7"></td>
+              <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/newbb/">FÓRUM</a></td>
+              <td width="1" bgcolor="#d7d7d7"></td>
+              <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/mydownloads/">DOWNLOAD</a></td>
+              <td width="1" bgcolor="#d7d7d7"></td>
+              <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/contact/">CONTATO</a></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>  </td>
+  </tr>
+</table>
+<table width="758"  border="0" align="center" cellpadding="0" cellspacing="0" class="dole">
+  <tr>
+    <td><div class="privatnost"><br />
+Copyright © 2004 by <a href="<{$xoops_url}>" target="_self">your company</a> &nbsp;|&nbsp;
+<!-- Webmaster, dont remove this text. It denied by license! -->
+<{$xoops_footer}> &nbsp;|&nbsp;
+<!-- Webmaster, dont remove this text. It denied by license! -->
+Design by <a href="http://www.7dana.com" target="_blank">7dana.com</a>
+<!--End  "design by" text! -->
+<br /><br />
+</div></td>
+  </tr>
+</table>
+</body>
+</html>
